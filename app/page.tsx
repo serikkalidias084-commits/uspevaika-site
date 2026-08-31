@@ -292,16 +292,18 @@ export default function App() {
               <h2 className="text-3xl font-extrabold mt-3">Как нас найти</h2>
             </div>
             <div className="flex flex-wrap gap-3">
+              {/* Исправлено: ссылка ведет прямо на поиск адреса в 2GIS Атырау */}
               <a 
-                href="https://2gis.kz/atyrau" 
+                href="https://2gis.kz/atyrau/search/ул.%20Жубана%20Молдагалиева%2C%2032" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-5 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-bold transition-all flex items-center gap-2 text-white border border-zinc-700"
               >
                 <span>Открыть в 2GIS</span>
               </a>
+              {/* Исправлено: ссылка ведет прямо на поиск адреса в Яндекс Картах */}
               <a 
-                href="https://yandex.kz/maps" 
+                href="https://yandex.kz/maps/?text=Атырау%2C%20ул.%20Жубана%20Молдагалиева%2C%2032" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-5 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-bold transition-all flex items-center gap-2 text-white border border-zinc-700"
@@ -319,8 +321,9 @@ export default function App() {
               </div>
               <h3 className="text-xl font-bold">ул. Жубана Молдагалиева, 32</h3>
               <p className="text-sm text-zinc-400">Учебный центр «Успевайка» ждет вас!</p>
+              {/* Исправлено: кнопка построения маршрута ведет на точный адрес в 2GIS */}
               <a 
-                href="https://2gis.kz/atyrau" 
+                href="https://2gis.kz/atyrau/search/ул.%20Жубана%20Молдагалиева%2C%2032" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-xs shadow-lg shadow-indigo-600/25 hover:opacity-95 transition-opacity"
@@ -475,7 +478,7 @@ export default function App() {
             </svg>
             <span>Instagram</span>
           </a>
-          <a href="https://wa.me/77012258666?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B5%20%C2%AB%D0%A3%D1%81%D0%BF%D0%B5%D0%B2%D0%B0%D0%B9%D0%BA%D0%B0%C2%BB." target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors flex items-center gap-1.5">
+          <a href="https://wa.me/77012258666?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%81%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B5%20%C2%AB%D0%A3%D1%81%D0%BF%D0%B5%D0%B2%D0%B0%D0%B9%D0%BA%D0%B0%C2%BB." target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors flex items-center gap-1.5">
             <MessageCircle className="w-4 h-4 text-emerald-400" />
             <span>WhatsApp (+7 701 225 86 66)</span>
           </a>
