@@ -2,7 +2,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Sparkles, ArrowRight, BookOpen, ShieldCheck, Zap, Phone, MapPin, CheckCircle2, MessageCircle, ChevronDown } from 'lucide-react'
+import { Sparkles, ArrowRight, BookOpen, ShieldCheck, Zap, Phone, MapPin, CheckCircle2, MessageCircle, ChevronDown, Award, Users } from 'lucide-react'
 
 export default function App() {
   const [submitted, setSubmitted] = useState(false)
@@ -27,19 +27,23 @@ export default function App() {
   const faqs = [
     {
       q: "С какого возраста принимаются дети?",
-      a: "Мы принимаем детей с 3 лет на развивающие занятия и подготовку."
+      a: "Мы принимаем детей с 3 лет на развивающие занятия, подготовку к школе и нейро-направления."
     },
     {
       q: "Сколько детей в одной группе?",
-      a: "Занятия проходят в мини-группах до 5 человек для максимального внимания к каждому ребенку."
+      a: "Занятия проходят в мини-группах до 5 человек, что гарантирует индивидуальный подход к каждому ребенку."
     },
     {
-      q: "Сколько стоит пробный урок?",
-      a: "Пробный урок стоит 2 000 тенге. При покупке пробного урока диагностика проводится бесплатно!"
+      q: "Сколько стоит пробный урок и диагностика?",
+      a: "Пробный урок стоит 2 000 тенге. При покупке абонемента комплексная диагностика ребенка проводится абсолютно бесплатно!"
+    },
+    {
+      q: "Какие методы используются в обучении?",
+      a: "Мы совмещаем классические методики с нейроподходом: упражнения на развитие полушарий мозга, концентрации внимания (зейінді) и логики."
     },
     {
       q: "Как записаться на занятие?",
-      a: "Вы можете оставить заявку на сайте или написать нам в WhatsApp, и мы подберем удобное время."
+      a: "Вы можете заполнить форму ниже, выбрать курс и отправить заявку в один клик через WhatsApp."
     }
   ]
 
@@ -58,16 +62,15 @@ export default function App() {
             <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent block">
               Bilim Oner
             </span>
-            <span className="text-[10px] text-indigo-400 font-medium uppercase tracking-widest block">Нейро-орталығы</span>
+            <span className="text-[10px] text-indigo-400 font-medium uppercase tracking-widest block">Нейро-орталығы · Атырау</span>
           </div>
         </div>
 
         <div className="hidden md:flex items-center gap-8 text-sm text-zinc-400 font-medium">
           <a href="#about" className="hover:text-white transition-colors">О нас</a>
-          <a href="#prices" className="hover:text-white transition-colors">Цены и прайс</a>
-          <a href="#map" className="hover:text-white transition-colors">Карта</a>
+          <a href="#prices" className="hover:text-white transition-colors">Курсы и цены</a>
+          <a href="#map" className="hover:text-white transition-colors">Контакты</a>
           <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
-          <a href="#contacts" className="hover:text-white transition-colors">Контакты</a>
         </div>
 
         <a 
@@ -96,7 +99,7 @@ export default function App() {
         </h1>
 
         <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mb-12 font-normal leading-relaxed">
-          Образовательный центр «Bilim Oner» в Атырау. Нейро-развитие, мышление, логика, подготовка к школе и английский язык для детей от 3 лет.
+          Инновационный образовательный центр в Атырау. Нейро-развитие, мышление, логика, подготовка к школе, ментальная арифметика и языки для детей от 3 лет.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center flex-wrap">
@@ -104,7 +107,7 @@ export default function App() {
             href="#prices" 
             className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-xl shadow-indigo-600/25 hover:opacity-95 transition-opacity flex items-center justify-center gap-3"
           >
-            <span>Посмотреть прайс</span>
+            <span>Посмотреть прайс и курсы</span>
             <ArrowRight className="w-4 h-4" />
           </a>
           <a 
@@ -114,7 +117,7 @@ export default function App() {
             className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-zinc-900 border border-zinc-800 text-zinc-300 font-semibold hover:bg-zinc-800/80 hover:text-white transition-all flex items-center justify-center gap-2"
           >
             <MessageCircle className="w-5 h-5 text-emerald-400" />
-            <span>Связаться в WhatsApp</span>
+            <span>Написать в WhatsApp</span>
           </a>
           <a 
             href="https://instagram.com/bilim_oner_atyrau" 
@@ -141,7 +144,7 @@ export default function App() {
             </div>
             <h3 className="text-xl font-bold mb-3 text-zinc-100">Нейро-подход</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">
-              Развитие миды, зейінді, мышления и логики с использованием современных методик.
+              Развитие миды, зейінді, мышления и логики с использованием современных нейроигр и методик.
             </p>
           </div>
 
@@ -149,43 +152,43 @@ export default function App() {
             <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6">
               <ShieldCheck className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-zinc-100">Мини-группы</h3>
+            <h3 className="text-xl font-bold mb-3 text-zinc-100">Мини-группы до 5 детей</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">
-              Обучение в группах до 5 человек для максимального индивидуального подхода к каждому ребенку.
+              Обучение в небольших группах обеспечивает максимальный фокус и внимание преподавателя к каждому ребенку.
             </p>
           </div>
 
           <div className="p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-xl group hover:border-pink-500/50 transition-colors">
             <div className="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 mb-6">
-              <Sparkles className="w-6 h-6" />
+              <Award className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-zinc-100">С 3-х лет</h3>
+            <h3 className="text-xl font-bold mb-3 text-zinc-100">Опытные педагоги</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">
-              Уверенная подготовка детей к школе, развитие речи, мышления и творческих способностей.
+              Профессиональные преподаватели со стажем, любящие детей и знающие современные стандарты развития.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Цены и направления */}
+      {/* Цены и расширенные направления */}
       <section id="prices" className="relative z-10 max-w-7xl mx-auto px-6 py-20 border-t border-zinc-800/50">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3 inline-block">
-            Пробный урок всего за 2 000 ₸ (диагностика бесплатна при покупке!)
+            Пробный урок всего за 2 000 ₸ (диагностика бесплатна при покупке абонемента!)
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Прайс-лист</h2>
-          <p className="text-zinc-400">Актуальные направления и стоимость занятий в «Bilim Oner»</p>
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Наши курсы и прайс</h2>
+          <p className="text-zinc-400">Выберите подходящее направление для вашего ребенка в центре «Bilim Oner»</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Карточка 1: Нейро-МАД */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {/* 1. Нейро-МАД */}
           <div className="p-8 rounded-3xl bg-gradient-to-b from-zinc-900/80 to-zinc-900/30 border border-zinc-800 backdrop-blur-xl flex flex-col justify-between">
             <div>
               <span className="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold">
-                Развитие
+                Развитие мозга
               </span>
               <h3 className="text-2xl font-bold mt-4 mb-2">Нейро-МАД</h3>
-              <p className="text-zinc-400 text-sm mb-6">Развитие миды, зейінді, мышления и логики.</p>
+              <p className="text-zinc-400 text-sm mb-6">Развитие миды, зейінді, мышления, памяти и логики.</p>
               
               <div className="space-y-3 mb-8">
                 <div className="flex items-center justify-between text-sm py-2 border-b border-zinc-800/60">
@@ -194,7 +197,7 @@ export default function App() {
                 </div>
                 <div className="flex items-center justify-between text-sm py-2">
                   <span className="text-zinc-300">Стоимость</span>
-                  <span className="font-bold text-indigo-400">35 000 тенге</span>
+                  <span className="font-bold text-indigo-400">35 000 ₸ / месяц</span>
                 </div>
               </div>
             </div>
@@ -209,17 +212,17 @@ export default function App() {
             </a>
           </div>
 
-          {/* Карточка 2: Развивашка */}
+          {/* 2. Развивашка */}
           <div className="p-8 rounded-3xl bg-gradient-to-b from-indigo-950/30 via-zinc-900/80 to-zinc-900/30 border border-indigo-500/30 backdrop-blur-xl flex flex-col justify-between relative shadow-xl shadow-indigo-950/20">
             <div>
               <div className="absolute -top-3 right-8 px-3 py-1 rounded-full bg-indigo-600 text-white text-[11px] font-bold uppercase tracking-wider">
-                Популярно
+                Хит
               </div>
               <span className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-semibold">
                 С 3-х лет
               </span>
               <h3 className="text-2xl font-bold mt-4 mb-2">Развивашка</h3>
-              <p className="text-zinc-400 text-sm mb-6">Все необходимые материалы уже включены в стоимость.</p>
+              <p className="text-zinc-400 text-sm mb-6">Все необходимые учебные материалы уже включены в стоимость.</p>
               
               <div className="space-y-3 mb-8">
                 <div className="flex items-center justify-between text-sm py-2 border-b border-zinc-800/60">
@@ -228,7 +231,7 @@ export default function App() {
                 </div>
                 <div className="flex items-center justify-between text-sm py-2">
                   <span className="text-zinc-300">Стоимость</span>
-                  <span className="font-bold text-purple-400">35 000 тенге</span>
+                  <span className="font-bold text-purple-400">35 000 ₸ / месяц</span>
                 </div>
               </div>
             </div>
@@ -243,14 +246,14 @@ export default function App() {
             </a>
           </div>
 
-          {/* Карточка 3: Английский язык */}
+          {/* 3. Английский язык */}
           <div className="p-8 rounded-3xl bg-gradient-to-b from-zinc-900/80 to-zinc-900/30 border border-zinc-800 backdrop-blur-xl flex flex-col justify-between">
             <div>
               <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
                 Языковой курс
               </span>
               <h3 className="text-2xl font-bold mt-4 mb-2">Английский язык</h3>
-              <p className="text-zinc-400 text-sm mb-6">Английский язык + нейрографика (урок 1 час).</p>
+              <p className="text-zinc-400 text-sm mb-6">Английский язык + нейрографика (длительность урока 1 час).</p>
               
               <div className="space-y-3 mb-8">
                 <div className="flex items-center justify-between text-sm py-2 border-b border-zinc-800/60">
@@ -259,13 +262,106 @@ export default function App() {
                 </div>
                 <div className="flex items-center justify-between text-sm py-2">
                   <span className="text-zinc-300">Стоимость</span>
-                  <span className="font-bold text-emerald-400">35 000 тенге</span>
+                  <span className="font-bold text-emerald-400">35 000 ₸ / месяц</span>
                 </div>
               </div>
             </div>
 
             <a 
               href="https://wa.me/77751316128?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%C2%AB%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D1%8F%D0%B7%D1%8B%D0%BA%C2%BB." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full py-3.5 rounded-2xl bg-zinc-800 hover:bg-zinc-700 font-semibold text-sm transition-all text-center block"
+            >
+              Записаться в WhatsApp
+            </a>
+          </div>
+
+          {/* 4. Ментальная арифметика */}
+          <div className="p-8 rounded-3xl bg-gradient-to-b from-zinc-900/80 to-zinc-900/30 border border-zinc-800 backdrop-blur-xl flex flex-col justify-between">
+            <div>
+              <span className="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold">
+                Интеллект
+              </span>
+              <h3 className="text-2xl font-bold mt-4 mb-2">Ментальная арифметика</h3>
+              <p className="text-zinc-400 text-sm mb-6">Быстрый счет в уме, развитие концентрации и обоих полушарий.</p>
+              
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center justify-between text-sm py-2 border-b border-zinc-800/60">
+                  <span className="text-zinc-300">Формат групп</span>
+                  <span className="font-semibold text-zinc-400">До 5 человек</span>
+                </div>
+                <div className="flex items-center justify-between text-sm py-2">
+                  <span className="text-zinc-300">Стоимость</span>
+                  <span className="font-bold text-cyan-400">35 000 ₸ / месяц</span>
+                </div>
+              </div>
+            </div>
+
+            <a 
+              href="https://wa.me/77751316128?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%20%D1%80%D0%B5%D0%B1%D0%B5%D0%BD%D0%BA%D0%B0%20%D0%BD%D0%B0%20%C2%AB%D0%9C%D0%B5%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D0%B0%D1%80%D0%B8%D1%84%D0%BC%D0%B5%D1%82%D0%B8%D0%BA%D1%83%C2%BB." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full py-3.5 rounded-2xl bg-zinc-800 hover:bg-zinc-700 font-semibold text-sm transition-all text-center block"
+            >
+              Записаться в WhatsApp
+            </a>
+          </div>
+
+          {/* 5. Скорочтение */}
+          <div className="p-8 rounded-3xl bg-gradient-to-b from-zinc-900/80 to-zinc-900/30 border border-zinc-800 backdrop-blur-xl flex flex-col justify-between">
+            <div>
+              <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold">
+                Навыки чтения
+              </span>
+              <h3 className="text-2xl font-bold mt-4 mb-2">Скорочтение</h3>
+              <p className="text-zinc-400 text-sm mb-6">Увеличение скорости чтения, улучшение понимания и памяти текста.</p>
+              
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center justify-between text-sm py-2 border-b border-zinc-800/60">
+                  <span className="text-zinc-300">Формат групп</span>
+                  <span className="font-semibold text-zinc-400">До 5 человек</span>
+                </div>
+                <div className="flex items-center justify-between text-sm py-2">
+                  <span className="text-zinc-300">Стоимость</span>
+                  <span className="font-bold text-amber-400">35 000 ₸ / месяц</span>
+                </div>
+              </div>
+            </div>
+
+            <a 
+              href="https://wa.me/77751316128?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%20%D1%80%D0%B5%D0%B1%D0%B5%D0%BD%D0%BA%D0%B0%20%D0%BD%D0%B0%20%C2%AB%D0%A1%D0%BA%D0%BE%D1%80%D0%BE%D1%87%D1%82%D0%B5%D0%BD%D0%B8%D0%B5%C2%BB." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full py-3.5 rounded-2xl bg-zinc-800 hover:bg-zinc-700 font-semibold text-sm transition-all text-center block"
+            >
+              Записаться в WhatsApp
+            </a>
+          </div>
+
+          {/* 6. Подготовка к школе */}
+          <div className="p-8 rounded-3xl bg-gradient-to-b from-zinc-900/80 to-zinc-900/30 border border-zinc-800 backdrop-blur-xl flex flex-col justify-between">
+            <div>
+              <span className="px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs font-semibold">
+                Школьная база
+              </span>
+              <h3 className="text-2xl font-bold mt-4 mb-2">Подготовка к школе</h3>
+              <p className="text-zinc-400 text-sm mb-6">Основы грамоты, счета, письма и психологическая готовность.</p>
+              
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center justify-between text-sm py-2 border-b border-zinc-800/60">
+                  <span className="text-zinc-300">Формат групп</span>
+                  <span className="font-semibold text-zinc-400">До 5 человек</span>
+                </div>
+                <div className="flex items-center justify-between text-sm py-2">
+                  <span className="text-zinc-300">Стоимость</span>
+                  <span className="font-bold text-rose-400">35 000 ₸ / месяц</span>
+                </div>
+              </div>
+            </div>
+
+            <a 
+              href="https://wa.me/77751316128?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%20%D1%80%D0%B5%D0%B1%D0%B5%D0%BD%D0%BA%D0%B0%20%D0%BD%D0%B0%20%C2%AB%D0%9F%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D1%83%20%D0%BA%20%D1%8шкoле%C2%BB." 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-full py-3.5 rounded-2xl bg-zinc-800 hover:bg-zinc-700 font-semibold text-sm transition-all text-center block"
@@ -440,6 +536,9 @@ export default function App() {
                       <option value="Нейро-МАД (35 000 ₸)">Нейро-МАД (35 000 ₸)</option>
                       <option value="Развивашка (35 000 ₸)">Развивашка (35 000 ₸)</option>
                       <option value="Английский язык (35 000 ₸)">Английский язык (35 000 ₸)</option>
+                      <option value="Ментальная арифметика (35 000 ₸)">Ментальная арифметика (35 000 ₸)</option>
+                      <option value="Скорочтение (35 000 ₸)">Скорочтение (35 000 ₸)</option>
+                      <option value="Подготовка к школе (35 000 ₸)">Подготовка к школе (35 000 ₸)</option>
                       <option value="Пробный урок (2 000 ₸)">Пробный урок (2 000 ₸)</option>
                     </select>
                   </div>
