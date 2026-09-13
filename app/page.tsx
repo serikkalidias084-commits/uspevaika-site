@@ -37,6 +37,57 @@ const InstagramIcon = ({ className = 'w-4 h-4' }: { className?: string }) => (
   </svg>
 );
 
+// КОМПОНЕНТ ВЕКТОРНОГО ЛОГОТИПА AIYM QAIYRGALI (PLAYFAIR DISPLAY)
+const AtelierLogoSVG = ({ className = 'w-11 h-11' }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 500 500"
+    className={className}
+  >
+    <defs>
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+          .circle-frame {
+            fill: none;
+            stroke: #7B3F4B;
+            stroke-width: 6;
+          }
+          .monogram {
+            font-family: 'Playfair Display', serif;
+            font-size: 155px;
+            font-weight: 600;
+            fill: #6E2636;
+            text-anchor: middle;
+            dominant-baseline: central;
+          }
+          .name-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 5px;
+            fill: #1A1A1A;
+            text-anchor: middle;
+          }
+          .sub-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            fill: #6E2636;
+            text-anchor: middle;
+          }
+        `}
+      </style>
+    </defs>
+    <rect width="500" height="500" rx="90" fill="#ffffff" />
+    <circle className="circle-frame" cx="250" cy="210" r="160" />
+    <text x="250" y="205" className="monogram">AK</text>
+    <text x="250" y="325" className="name-text">AIYM QAIYRGALI</text>
+    <text x="250" y="360" className="sub-text">СӘН АТЕЛЬЕСІ</text>
+  </svg>
+);
+
 // ==========================================
 // НАСТРАИВАЕМЫЕ КОНСТАНТЫ (1 КЛИК ДЛЯ ИЗМЕНЕНИЙ)
 // ==========================================
@@ -183,9 +234,7 @@ export default function LandingPage() {
       <header className="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-red-100 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-red-600 to-rose-600 flex items-center justify-center shadow-md shadow-red-500/20">
-              <span className="font-bold text-lg tracking-wider text-white">AK</span>
-            </div>
+            <AtelierLogoSVG className="w-11 h-11 rounded-xl shadow-md shadow-red-500/10" />
             <div>
               <span className="block font-bold text-lg tracking-tight text-slate-900 group-hover:text-red-600 transition-colors">
                 {COMPANY_NAME}
@@ -315,9 +364,7 @@ export default function LandingPage() {
               <div className="relative rounded-3xl bg-white border border-red-100 p-6 sm:p-8 shadow-xl">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-rose-600 flex items-center justify-center text-xl font-bold text-white shadow-md">
-                      AK
-                    </div>
+                    <AtelierLogoSVG className="w-14 h-14 rounded-2xl shadow-md" />
                     <div>
                       <h3 className="font-bold text-lg text-slate-900">{COMPANY_NAME}</h3>
                       <p className="text-xs text-emerald-600 font-medium">● Открыто / Прием заказов</p>
@@ -748,9 +795,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-rose-600 flex items-center justify-center font-bold text-white">
-                AK
-              </div>
+              <AtelierLogoSVG className="w-10 h-10 rounded-xl" />
               <div>
                 <span className="font-bold text-white">{COMPANY_NAME}</span>
                 <span className="block text-xs text-stone-400">Ателье в Атырау</span>
