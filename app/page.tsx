@@ -15,8 +15,6 @@ import {
   Star,
   Shirt,
   Sparkle,
-  Compass,
-  Calendar,
   User,
   Send
 } from 'lucide-react';
@@ -174,45 +172,44 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-purple-500 selection:text-white relative overflow-hidden">
-      {/* ФОНОВЫЕ СВЕТОВЫЕ ПЯТНА (GLOW EFFECTS) */}
+    <div className="min-h-screen bg-stone-50 text-slate-900 selection:bg-red-600 selection:text-white relative overflow-hidden">
+      {/* КРАСИВЫЙ КРАСНО-БЕЛЫЙ ФОНОВЫЙ ГРАДИЕНТ */}
       <div className="pointer-events-none fixed inset-0 z-0">
-        <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-[140px]" />
-        <div className="absolute top-1/3 right-1/4 w-[450px] h-[450px] bg-pink-600/10 rounded-full blur-[150px]" />
-        <div className="absolute bottom-10 left-1/3 w-[600px] h-[400px] bg-indigo-600/10 rounded-full blur-[160px]" />
+        <div className="absolute top-0 left-1/3 -translate-x-1/2 w-[600px] h-[600px] bg-red-500/10 rounded-full blur-[160px]" />
+        <div className="absolute top-1/4 right-1/4 w-[450px] h-[450px] bg-rose-500/10 rounded-full blur-[150px]" />
       </div>
 
       {/* ШАПКА / НАВИГАЦИЯ */}
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-zinc-950/80 border-b border-zinc-800/80">
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-red-100 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center shadow-lg shadow-purple-500/25 border border-purple-400/30">
+            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-red-600 to-rose-600 flex items-center justify-center shadow-md shadow-red-500/20">
               <span className="font-bold text-lg tracking-wider text-white">AK</span>
             </div>
             <div>
-              <span className="block font-bold text-lg tracking-tight text-zinc-100 group-hover:text-purple-400 transition-colors">
+              <span className="block font-bold text-lg tracking-tight text-slate-900 group-hover:text-red-600 transition-colors">
                 {COMPANY_NAME}
               </span>
-              <span className="block text-xs text-zinc-400">
+              <span className="block text-xs text-slate-500">
                 Ателье в Атырау
               </span>
             </div>
           </a>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
-            <a href="#advantages" className="hover:text-zinc-100 transition-colors">
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+            <a href="#advantages" className="hover:text-red-600 transition-colors">
               Преимущества
             </a>
-            <a href="#services" className="hover:text-zinc-100 transition-colors">
+            <a href="#services" className="hover:text-red-600 transition-colors">
               Услуги и цены
             </a>
-            <a href="#locations" className="hover:text-zinc-100 transition-colors">
+            <a href="#locations" className="hover:text-red-600 transition-colors">
               Адреса
             </a>
-            <a href="#faq" className="hover:text-zinc-100 transition-colors">
+            <a href="#faq" className="hover:text-red-600 transition-colors">
               FAQ
             </a>
-            <a href="#contact" className="hover:text-zinc-100 transition-colors">
+            <a href="#contact" className="hover:text-red-600 transition-colors">
               Записаться
             </a>
           </nav>
@@ -222,7 +219,7 @@ export default function LandingPage() {
               href={getWhatsAppUrl('Здравствуйте! Хочу проконсультироваться по поводу пошива/услуг ателье.')}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-medium text-sm shadow-lg shadow-emerald-600/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center gap-2 px-4.5 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-medium text-sm shadow-md shadow-red-600/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               <MessageCircle className="w-4 h-4" />
               <span className="hidden sm:inline">Написать в WhatsApp</span>
@@ -233,30 +230,30 @@ export default function LandingPage() {
       </header>
 
       {/* ГЛАВНЫЙ ЭКРАН (HERO) */}
-      <section className="relative z-10 pt-16 pb-20 md:pt-24 md:pb-32">
+      <section className="relative z-10 pt-16 pb-20 md:pt-24 md:pb-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Левая колонка */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 text-xs font-medium text-purple-400 shadow-inner">
-                <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-xs font-semibold text-red-700">
+                <span className="flex h-2 w-2 rounded-full bg-red-600 animate-pulse" />
                 <span>{EXPERIENCE_YEARS} лет опыта работы мастера</span>
-                <span className="text-zinc-600">|</span>
-                <span className="inline-flex items-center gap-1 text-amber-400">
-                  <Star className="w-3.5 h-3.5 fill-amber-400" />
+                <span className="text-red-300">|</span>
+                <span className="inline-flex items-center gap-1 text-amber-600">
+                  <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
                   {RATING_SCORE} ({REVIEWS_COUNT} оценок в 2GIS)
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] text-slate-900">
                 Индивидуальный пошив и{' '}
-                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent">
-                  прокат ұзату көйшек
+                <span className="bg-gradient-to-r from-red-600 to-rose-600 bg-clip-text text-transparent">
+                  прокат ұзату көйлек
                 </span>{' '}
                 в Атырау
               </h1>
 
-              <p className="text-base sm:text-lg text-zinc-400 max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
                 {COMPANY_SUBTITLE}. Создаем одежду любой сложности, выполняем машинную вышивку, термотрансферные наклейки и подгон по фигуре.
               </p>
 
@@ -265,7 +262,7 @@ export default function LandingPage() {
                   href={getWhatsAppUrl('Здравствуйте! Хочу записаться на примерку в ателье Aiym Qaiyrgali.')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-7 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-semibold shadow-xl shadow-purple-600/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  className="inline-flex items-center gap-2.5 px-7 py-4 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-semibold shadow-lg shadow-red-600/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <span>Записаться на примерку</span>
                   <ArrowRight className="w-4 h-4" />
@@ -273,41 +270,41 @@ export default function LandingPage() {
 
                 <a
                   href="#services"
-                  className="inline-flex items-center gap-2 px-6 py-4 rounded-xl backdrop-blur-xl bg-zinc-900/80 hover:bg-zinc-800/80 border border-zinc-800 text-zinc-200 font-semibold transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 font-semibold transition-all shadow-xs"
                 >
                   <span>Смотреть услуги</span>
                 </a>
               </div>
 
               {/* Мини-плашки с фактами */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 border-t border-zinc-800/80">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 border-t border-slate-200">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                  <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center text-red-600">
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-zinc-100">12 лет</div>
-                    <div className="text-xs text-zinc-400">Стаж мастера</div>
+                    <div className="text-sm font-bold text-slate-900">12 лет</div>
+                    <div className="text-xs text-slate-500">Стаж мастера</div>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
+                  <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center text-red-600">
                     <Shirt className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-zinc-100">Любой дизайн</div>
-                    <div className="text-xs text-zinc-400">Кез келген киім</div>
+                    <div className="text-sm font-bold text-slate-900">Любой дизайн</div>
+                    <div className="text-xs text-slate-500">Кез келген киім</div>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 col-span-2 sm:col-span-1">
-                  <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                  <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center text-red-600">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-zinc-100">2 точки</div>
-                    <div className="text-xs text-zinc-400">В центре Атырау</div>
+                    <div className="text-sm font-bold text-slate-900">2 точки</div>
+                    <div className="text-xs text-slate-500">В центре Атырау</div>
                   </div>
                 </div>
               </div>
@@ -315,22 +312,22 @@ export default function LandingPage() {
 
             {/* Правая колонка с премиальной визуальной карточкой */}
             <div className="lg:col-span-5">
-              <div className="relative rounded-3xl backdrop-blur-xl bg-zinc-900/60 border border-zinc-800 p-6 sm:p-8 shadow-2xl">
+              <div className="relative rounded-3xl bg-white border border-red-100 p-6 sm:p-8 shadow-xl">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-xl font-bold text-white shadow-md">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-rose-600 flex items-center justify-center text-xl font-bold text-white shadow-md">
                       AK
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg text-zinc-100">{COMPANY_NAME}</h3>
-                      <p className="text-xs text-emerald-400 font-medium">● Открыто / Прием заказов</p>
+                      <h3 className="font-bold text-lg text-slate-900">{COMPANY_NAME}</h3>
+                      <p className="text-xs text-emerald-600 font-medium">● Открыто / Прием заказов</p>
                     </div>
                   </div>
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-800/80 hover:bg-zinc-700/80 text-xs font-medium text-pink-400 border border-zinc-700 transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-50 hover:bg-red-100 text-xs font-semibold text-red-600 border border-red-200 transition-colors"
                   >
                     <InstagramIcon className="w-3.5 h-3.5" />
                     <span>Instagram</span>
@@ -338,28 +335,28 @@ export default function LandingPage() {
                 </div>
 
                 <div className="space-y-4 mb-6">
-                  <div className="p-4 rounded-2xl bg-zinc-950/60 border border-zinc-800/80 flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
+                  <div className="p-4 rounded-2xl bg-stone-50 border border-stone-200/80 flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-xs text-zinc-400">Основной адрес:</div>
-                      <div className="text-sm font-medium text-zinc-100">{ADDRESS_1}</div>
+                      <div className="text-xs text-slate-500">Основной адрес:</div>
+                      <div className="text-sm font-medium text-slate-900">{ADDRESS_1}</div>
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-zinc-950/60 border border-zinc-800/80 flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-pink-400 shrink-0 mt-0.5" />
+                  <div className="p-4 rounded-2xl bg-stone-50 border border-stone-200/80 flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-xs text-zinc-400">Филиал / Бутик:</div>
-                      <div className="text-sm font-medium text-zinc-100">{ADDRESS_2}</div>
+                      <div className="text-xs text-slate-500">Филиал / Бутик:</div>
+                      <div className="text-sm font-medium text-slate-900">{ADDRESS_2}</div>
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-zinc-950/60 border border-zinc-800/80 flex items-center justify-between">
+                  <div className="p-4 rounded-2xl bg-stone-50 border border-stone-200/80 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <Clock className="w-5 h-5 text-emerald-400 shrink-0" />
+                      <Clock className="w-5 h-5 text-red-600 shrink-0" />
                       <div>
-                        <div className="text-xs text-zinc-400">Режим работы:</div>
-                        <div className="text-sm font-medium text-zinc-100">9:00 – 16:00 (Обед 13:00–14:00)</div>
+                        <div className="text-xs text-slate-500">Режим работы:</div>
+                        <div className="text-sm font-medium text-slate-900">9:00 – 16:00 (Обед 13:00–14:00)</div>
                       </div>
                     </div>
                   </div>
@@ -368,9 +365,9 @@ export default function LandingPage() {
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   <a
                     href={`tel:${PHONE_NUMBER}`}
-                    className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-zinc-800/90 hover:bg-zinc-700 text-sm font-semibold text-zinc-100 border border-zinc-700 transition-colors"
+                    className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-sm font-semibold text-white transition-colors"
                   >
-                    <Phone className="w-4 h-4 text-purple-400" />
+                    <Phone className="w-4 h-4 text-red-400" />
                     <span>Позвонить</span>
                   </a>
 
@@ -378,20 +375,20 @@ export default function LandingPage() {
                     href={getWhatsAppUrl('Здравствуйте! Хочу уточнить детали по пошиву.')}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-sm font-semibold text-emerald-400 border border-emerald-500/30 transition-colors"
+                    className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-sm font-semibold text-white transition-colors"
                   >
                     <MessageCircle className="w-4 h-4" />
                     <span>WhatsApp</span>
                   </a>
                 </div>
 
-                <div className="pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs text-zinc-400">
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
                   <span>Рейтинг 2GIS: 4.9 из 5.0</span>
                   <a
                     href={GIS_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-purple-400 hover:underline font-medium"
+                    className="text-red-600 hover:underline font-medium"
                   >
                     Открыть на карте →
                   </a>
@@ -403,57 +400,57 @@ export default function LandingPage() {
       </section>
 
       {/* БЛОК ПРЕИМУЩЕСТВ */}
-      <section id="advantages" className="relative z-10 py-20 border-t border-zinc-900 bg-zinc-950/50">
+      <section id="advantages" className="relative z-10 py-20 border-t border-red-100 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-semibold tracking-wider uppercase text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
+            <span className="text-xs font-semibold tracking-wider uppercase text-red-600 bg-red-50 px-3 py-1 rounded-full border border-red-200">
               Почему выбирают нас
             </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
+            <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
               Качество ручной работы и внимание к деталям
             </h2>
-            <p className="mt-4 text-zinc-400 text-base">
+            <p className="mt-4 text-slate-600 text-base">
               Мы объединили многолетний опыт пошива, современные технологии печати и индивидуальный подход к каждому клиенту.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-2xl backdrop-blur-xl bg-zinc-900/50 border border-zinc-800 p-6 hover:border-purple-500/40 transition-all group">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-110 transition-transform">
+            <div className="rounded-2xl bg-stone-50 border border-red-100 p-6 hover:border-red-300 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center text-red-600 mb-5 group-hover:scale-110 transition-transform">
                 <Scissors className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-zinc-100 mb-2">12 лет опыта</h3>
-              <p className="text-sm text-zinc-400 leading-relaxed">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">12 лет опыта</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
                 Профессиональный мастер с 12-летним стажем пошива одежды любой сложности.
               </p>
             </div>
 
-            <div className="rounded-2xl backdrop-blur-xl bg-zinc-900/50 border border-zinc-800 p-6 hover:border-pink-500/40 transition-all group">
-              <div className="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 mb-5 group-hover:scale-110 transition-transform">
+            <div className="rounded-2xl bg-stone-50 border border-red-100 p-6 hover:border-red-300 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center text-red-600 mb-5 group-hover:scale-110 transition-transform">
                 <Sparkle className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-zinc-100 mb-2">Любой дизайн</h3>
-              <p className="text-sm text-zinc-400 leading-relaxed">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Любой дизайн</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
                 Воплощаем в жизнь любые ваши идеи: от повседневных костюмов до эксклюзивных нарядов.
               </p>
             </div>
 
-            <div className="rounded-2xl backdrop-blur-xl bg-zinc-900/50 border border-zinc-800 p-6 hover:border-indigo-500/40 transition-all group">
-              <div className="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5 group-hover:scale-110 transition-transform">
+            <div className="rounded-2xl bg-stone-50 border border-red-100 p-6 hover:border-red-300 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center text-red-600 mb-5 group-hover:scale-110 transition-transform">
                 <Shirt className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-zinc-100 mb-2">Прокат на Ұзату</h3>
-              <p className="text-sm text-zinc-400 leading-relaxed">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Прокат на Ұзату</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
                 Широкий выбор национальных и торжественных платьев в аренду с подгонкой по фигуре.
               </p>
             </div>
 
-            <div className="rounded-2xl backdrop-blur-xl bg-zinc-900/50 border border-zinc-800 p-6 hover:border-emerald-500/40 transition-all group">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-5 group-hover:scale-110 transition-transform">
+            <div className="rounded-2xl bg-stone-50 border border-red-100 p-6 hover:border-red-300 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center text-red-600 mb-5 group-hover:scale-110 transition-transform">
                 <CheckCircle2 className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-zinc-100 mb-2">Вышивка & Термотрансфер</h3>
-              <p className="text-sm text-zinc-400 leading-relaxed">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Вышивка & Термотрансфер</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
                 Качественная машинная вышивка и термотрансферные наклейки для брендирования и декора.
               </p>
             </div>
@@ -462,18 +459,18 @@ export default function LandingPage() {
       </section>
 
       {/* БЛОК УСЛУГ / ПРАЙС-ЛИСТ */}
-      <section id="services" className="relative z-10 py-20 border-t border-zinc-900">
+      <section id="services" className="relative z-10 py-20 border-t border-red-100 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <span className="text-xs font-semibold tracking-wider uppercase text-pink-400 bg-pink-500/10 px-3 py-1 rounded-full border border-pink-500/20">
+              <span className="text-xs font-semibold tracking-wider uppercase text-red-600 bg-red-50 px-3 py-1 rounded-full border border-red-200">
                 Наши услуги и цены
               </span>
-              <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
+              <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
                 Выберите то, что вам нужно
               </h2>
             </div>
-            <p className="text-zinc-400 max-w-md text-sm">
+            <p className="text-slate-600 max-w-md text-sm">
               Точная стоимость зависит от сложности фасона, ткани и срочности. Запишитесь на консультацию в WhatsApp, чтобы рассчитать заказ.
             </p>
           </div>
@@ -482,26 +479,26 @@ export default function LandingPage() {
             {SERVICES.map((service) => (
               <div
                 key={service.id}
-                className="rounded-3xl backdrop-blur-xl bg-zinc-900/60 border border-zinc-800 p-7 flex flex-col justify-between hover:border-zinc-700 transition-all shadow-xl"
+                className="rounded-3xl bg-white border border-red-100 p-7 flex flex-col justify-between hover:border-red-300 transition-all shadow-md"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xl font-extrabold text-zinc-100">{service.price}</span>
+                    <span className="text-xl font-extrabold text-slate-900">{service.price}</span>
                     {service.badge && (
-                      <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-purple-600/20 to-pink-600/20 text-purple-300 border border-purple-500/30">
+                      <span className="px-3 py-1 rounded-full text-xs font-semibold bg-red-50 text-red-700 border border-red-200">
                         {service.badge}
                       </span>
                     )}
                   </div>
 
-                  <h3 className="text-xl font-bold text-zinc-100 mb-1">{service.title}</h3>
-                  <div className="text-xs font-medium text-pink-400 mb-4">{service.subtitle}</div>
-                  <p className="text-sm text-zinc-400 mb-6 leading-relaxed">{service.description}</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-1">{service.title}</h3>
+                  <div className="text-xs font-semibold text-red-600 mb-4">{service.subtitle}</div>
+                  <p className="text-sm text-slate-600 mb-6 leading-relaxed">{service.description}</p>
 
                   <ul className="space-y-2.5 mb-8">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2.5 text-sm text-zinc-300">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <li key={idx} className="flex items-center gap-2.5 text-sm text-slate-700">
+                        <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -512,7 +509,7 @@ export default function LandingPage() {
                   href={getWhatsAppUrl(`Здравствуйте! Меня интересует услуга: «${service.title}» (${service.price}). Подскажите детали.`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/20 transition-all hover:scale-[1.01]"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold text-sm shadow-md shadow-red-600/20 transition-all hover:scale-[1.01]"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Записаться в WhatsApp</span>
@@ -524,34 +521,34 @@ export default function LandingPage() {
       </section>
 
       {/* БЛОК С КАРТОЙ И АДРЕСАМИ */}
-      <section id="locations" className="relative z-10 py-20 border-t border-zinc-900 bg-zinc-950/60">
+      <section id="locations" className="relative z-10 py-20 border-t border-red-100 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-semibold tracking-wider uppercase text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+            <span className="text-xs font-semibold tracking-wider uppercase text-red-600 bg-red-50 px-3 py-1 rounded-full border border-red-200">
               Где нас найти
             </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
+            <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
               Два удобных адреса в Атырау
             </h2>
-            <p className="mt-4 text-zinc-400 text-sm">
+            <p className="mt-4 text-slate-600 text-sm">
               Выбирайте филиал, который ближе к вам, или свяжитесь с нами для вызова курьера/согласования примерки.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
             {/* Карточка 1 */}
-            <div className="rounded-3xl backdrop-blur-xl bg-zinc-900/60 border border-zinc-800 p-7 flex flex-col justify-between">
+            <div className="rounded-3xl bg-stone-50 border border-red-100 p-7 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 rounded-lg bg-purple-500/15 text-purple-400 text-xs font-semibold border border-purple-500/25">
+                  <span className="px-3 py-1 rounded-lg bg-red-100 text-red-700 text-xs font-semibold border border-red-200">
                     Филиал №1
                   </span>
-                  <span className="text-xs text-zinc-400 flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5" /> 9:00 – 16:00 (Обед 13:00–14:00)
+                  <span className="text-xs text-slate-500 flex items-center gap-1">
+                    <Clock className="w-3.5 h-3.5 text-red-600" /> 9:00 – 16:00 (Обед 13:00–14:00)
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-zinc-100 mb-2">Мкр. Атырау, Борана Нысанбаева, 29</h3>
-                <p className="text-sm text-zinc-400 mb-6">
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Мкр. Атырау, Борана Нысанбаева, 29</h3>
+                <p className="text-sm text-slate-600 mb-6">
                   Район городской администрации, 1 этаж. Удобный подъезд и парковка.
                 </p>
               </div>
@@ -561,34 +558,34 @@ export default function LandingPage() {
                   href={GIS_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-sm font-medium text-zinc-200 border border-zinc-700 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-sm font-medium text-slate-800 border border-slate-200 transition-colors"
                 >
-                  <MapPin className="w-4 h-4 text-purple-400" />
+                  <MapPin className="w-4 h-4 text-red-600" />
                   <span>Открыть в 2GIS</span>
                 </a>
                 <a
                   href={`tel:${PHONE_NUMBER}`}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-sm font-medium text-zinc-200 border border-zinc-700 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-sm font-medium text-slate-800 border border-slate-200 transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-emerald-400" />
+                  <Phone className="w-4 h-4 text-red-600" />
                   <span>{PHONE_DISPLAY_PRIMARY}</span>
                 </a>
               </div>
             </div>
 
             {/* Карточка 2 */}
-            <div className="rounded-3xl backdrop-blur-xl bg-zinc-900/60 border border-zinc-800 p-7 flex flex-col justify-between">
+            <div className="rounded-3xl bg-stone-50 border border-red-100 p-7 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 rounded-lg bg-pink-500/15 text-pink-400 text-xs font-semibold border border-pink-500/25">
+                  <span className="px-3 py-1 rounded-lg bg-red-100 text-red-700 text-xs font-semibold border border-red-200">
                     Филиал №2 (ТЦ Дина)
                   </span>
-                  <span className="text-xs text-zinc-400 flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5" /> Ежедневно
+                  <span className="text-xs text-slate-500 flex items-center gap-1">
+                    <Clock className="w-3.5 h-3.5 text-red-600" /> Ежедневно
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-zinc-100 mb-2">ТЦ «Дина», 2-этаж, бутик 43</h3>
-                <p className="text-sm text-zinc-400 mb-6">
+                <h3 className="text-xl font-bold text-slate-900 mb-2">ТЦ «Дина», 2-этаж, бутик 43</h3>
+                <p className="text-sm text-slate-600 mb-6">
                   Торговый центр «Дина», 2 этаж, бутик 43 — прием заказов и примерка нарядов.
                 </p>
               </div>
@@ -598,16 +595,16 @@ export default function LandingPage() {
                   href={GIS_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-sm font-medium text-zinc-200 border border-zinc-700 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-sm font-medium text-slate-800 border border-slate-200 transition-colors"
                 >
-                  <MapPin className="w-4 h-4 text-pink-400" />
+                  <MapPin className="w-4 h-4 text-red-600" />
                   <span>ТЦ Дина на карте</span>
                 </a>
                 <a
                   href={`tel:77026033385`}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-sm font-medium text-zinc-200 border border-zinc-700 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-sm font-medium text-slate-800 border border-slate-200 transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-emerald-400" />
+                  <Phone className="w-4 h-4 text-red-600" />
                   <span>{PHONE_DISPLAY_SECONDARY}</span>
                 </a>
               </div>
@@ -617,13 +614,13 @@ export default function LandingPage() {
       </section>
 
       {/* БЛОК FAQ (АККОРДЕОН) */}
-      <section id="faq" className="relative z-10 py-20 border-t border-zinc-900">
+      <section id="faq" className="relative z-10 py-20 border-t border-red-100 bg-stone-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold tracking-wider uppercase text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
+            <span className="text-xs font-semibold tracking-wider uppercase text-red-600 bg-red-50 px-3 py-1 rounded-full border border-red-200">
               Частые вопросы
             </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
+            <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
               Ответы на популярные вопросы
             </h2>
           </div>
@@ -634,21 +631,21 @@ export default function LandingPage() {
               return (
                 <div
                   key={idx}
-                  className="rounded-2xl backdrop-blur-xl bg-zinc-900/50 border border-zinc-800 overflow-hidden transition-all"
+                  className="rounded-2xl bg-white border border-red-100 overflow-hidden transition-all shadow-xs"
                 >
                   <button
                     onClick={() => toggleFaq(idx)}
-                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-semibold text-zinc-100 hover:text-purple-400 transition-colors"
+                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-semibold text-slate-900 hover:text-red-600 transition-colors"
                   >
                     <span>{item.question}</span>
                     <ChevronDown
-                      className={`w-5 h-5 text-zinc-400 transition-transform duration-200 ${
-                        isOpen ? 'rotate-180 text-purple-400' : ''
+                      className={`w-5 h-5 text-red-600 transition-transform duration-200 ${
+                        isOpen ? 'rotate-180' : ''
                       }`}
                     />
                   </button>
                   {isOpen && (
-                    <div className="px-6 pb-6 text-sm text-zinc-400 leading-relaxed border-t border-zinc-800/60 pt-4">
+                    <div className="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-red-50 pt-4">
                       {item.answer}
                     </div>
                   )}
@@ -660,17 +657,17 @@ export default function LandingPage() {
       </section>
 
       {/* ИНТЕРАКТИВНАЯ ФОРМА ОБРАТНОЙ СВЯЗИ В WHATSAPP */}
-      <section id="contact" className="relative z-10 py-20 border-t border-zinc-900 bg-zinc-950/60">
+      <section id="contact" className="relative z-10 py-20 border-t border-red-100 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl backdrop-blur-xl bg-gradient-to-br from-zinc-900/90 to-zinc-900/40 border border-zinc-800 p-8 sm:p-12 shadow-2xl">
+          <div className="rounded-3xl bg-gradient-to-br from-red-600 to-rose-700 text-white p-8 sm:p-12 shadow-xl">
             <div className="text-center max-w-xl mx-auto mb-10">
-              <span className="text-xs font-semibold tracking-wider uppercase text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+              <span className="text-xs font-semibold tracking-wider uppercase text-red-100 bg-white/20 px-3 py-1 rounded-full border border-white/30">
                 Записаться онлайн
               </span>
-              <h2 className="mt-4 text-2xl sm:text-3xl font-extrabold tracking-tight">
+              <h2 className="mt-4 text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
                 Отправьте заявку прямо в WhatsApp
               </h2>
-              <p className="mt-2 text-sm text-zinc-400">
+              <p className="mt-2 text-sm text-red-100">
                 Заполните форму ниже — текст заявки сформируется автоматически и откроется в вашем WhatsApp.
               </p>
             </div>
@@ -678,67 +675,67 @@ export default function LandingPage() {
             <form onSubmit={handleFormSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-medium text-zinc-400 mb-2">Ваше имя *</label>
+                  <label className="block text-xs font-medium text-red-100 mb-2">Ваше имя *</label>
                   <div className="relative">
-                    <User className="w-4 h-4 text-zinc-500 absolute left-4 top-1/2 -translate-y-1/2" />
+                    <User className="w-4 h-4 text-red-300 absolute left-4 top-1/2 -translate-y-1/2" />
                     <input
                       type="text"
                       required
                       placeholder="Например, Айсулу"
                       value={formName}
                       onChange={(e) => setFormName(e.target.value)}
-                      className="w-full bg-zinc-950/80 border border-zinc-800 rounded-xl pl-11 pr-4 py-3.5 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-purple-500 transition-colors"
+                      className="w-full bg-white/10 border border-white/20 rounded-xl pl-11 pr-4 py-3.5 text-sm text-white placeholder:text-red-200 focus:outline-none focus:bg-white/20 transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-zinc-400 mb-2">Номер телефона *</label>
+                  <label className="block text-xs font-medium text-red-100 mb-2">Номер телефона *</label>
                   <div className="relative">
-                    <Phone className="w-4 h-4 text-zinc-500 absolute left-4 top-1/2 -translate-y-1/2" />
+                    <Phone className="w-4 h-4 text-red-300 absolute left-4 top-1/2 -translate-y-1/2" />
                     <input
                       type="tel"
                       required
                       placeholder="+7 (701) 000-00-00"
                       value={formPhone}
                       onChange={(e) => setFormPhone(e.target.value)}
-                      className="w-full bg-zinc-950/80 border border-zinc-800 rounded-xl pl-11 pr-4 py-3.5 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-purple-500 transition-colors"
+                      className="w-full bg-white/10 border border-white/20 rounded-xl pl-11 pr-4 py-3.5 text-sm text-white placeholder:text-red-200 focus:outline-none focus:bg-white/20 transition-colors"
                     />
                   </div>
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-zinc-400 mb-2">Выберите услугу *</label>
+                <label className="block text-xs font-medium text-red-100 mb-2">Выберите услугу *</label>
                 <select
                   value={formService}
                   onChange={(e) => setFormService(e.target.value)}
-                  className="w-full bg-zinc-950/80 border border-zinc-800 rounded-xl px-4 py-3.5 text-sm text-zinc-100 focus:outline-none focus:border-purple-500 transition-colors"
+                  className="w-full bg-rose-900/60 border border-white/20 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:bg-rose-900 transition-colors"
                 >
-                  <option value="Индивидуальный пошив одежды">Индивидуальный пошив одежды</option>
-                  <option value="Прокат платья на Ұзату">Прокат платья на Ұзату</option>
-                  <option value="Машинная вышивка / Термотрансфер">Машинная вышивка / Термотрансфер</option>
-                  <option value="Ремонт и подгон одежды">Ремонт и подгон одежды</option>
-                  <option value="Другая услуга / Консультация">Другая услуга / Консультация</option>
+                  <option value="Индивидуальный пошив одежды" className="text-slate-900">Индивидуальный пошив одежды</option>
+                  <option value="Прокат платья на Ұзату" className="text-slate-900">Прокат платья на Ұзату</option>
+                  <option value="Машинная вышивка / Термотрансфер" className="text-slate-900">Машинная вышивка / Термотрансфер</option>
+                  <option value="Ремонт и подгон одежды" className="text-slate-900">Ремонт и подгон одежды</option>
+                  <option value="Другая услуга / Консультация" className="text-slate-900">Другая услуга / Консультация</option>
                 </select>
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-zinc-400 mb-2">Комментарий или пожелания</label>
+                <label className="block text-xs font-medium text-red-100 mb-2">Комментарий или пожелания</label>
                 <textarea
                   rows={3}
                   placeholder="Опишите желаемую модель, дату торжества или вопрос..."
                   value={formComment}
                   onChange={(e) => setFormComment(e.target.value)}
-                  className="w-full bg-zinc-950/80 border border-zinc-800 rounded-xl px-4 py-3.5 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-purple-500 transition-colors resize-none"
+                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-red-200 focus:outline-none focus:bg-white/20 transition-colors resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm shadow-xl shadow-emerald-600/25 transition-all hover:scale-[1.01] flex items-center justify-center gap-2"
+                className="w-full py-4 px-6 rounded-xl bg-white hover:bg-stone-100 text-red-700 font-bold text-sm shadow-lg transition-all hover:scale-[1.01] flex items-center justify-center gap-2"
               >
-                <Send className="w-4 h-4" />
+                <Send className="w-4 h-4 text-red-600" />
                 <span>Отправить заявку в WhatsApp</span>
               </button>
             </form>
@@ -747,38 +744,38 @@ export default function LandingPage() {
       </section>
 
       {/* ФУТЕР */}
-      <footer className="relative z-10 border-t border-zinc-900 bg-zinc-950 py-12">
+      <footer className="relative z-10 border-t border-red-100 bg-stone-900 text-stone-300 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center font-bold text-white">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-rose-600 flex items-center justify-center font-bold text-white">
                 AK
               </div>
               <div>
-                <span className="font-bold text-zinc-100">{COMPANY_NAME}</span>
-                <span className="block text-xs text-zinc-400">Ателье в Атырау</span>
+                <span className="font-bold text-white">{COMPANY_NAME}</span>
+                <span className="block text-xs text-stone-400">Ателье в Атырау</span>
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-6 text-sm text-zinc-400">
-              <a href={`tel:${PHONE_NUMBER}`} className="hover:text-zinc-100 transition-colors">
+            <div className="flex flex-wrap items-center gap-6 text-sm text-stone-400">
+              <a href={`tel:${PHONE_NUMBER}`} className="hover:text-white transition-colors">
                 {PHONE_DISPLAY_PRIMARY}
               </a>
               <a
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-pink-400 transition-colors flex items-center gap-1.5"
+                className="hover:text-red-400 transition-colors flex items-center gap-1.5"
               >
                 <InstagramIcon className="w-4 h-4" />
                 <span>{INSTAGRAM_HANDLE}</span>
               </a>
-              <a href={GIS_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">
+              <a href={GIS_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">
                 2GIS Атырау
               </a>
             </div>
 
-            <div className="text-xs text-zinc-500">
+            <div className="text-xs text-stone-500">
               © {new Date().getFullYear()} {COMPANY_NAME}. Все права защищены.
             </div>
           </div>
